@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bree Marketing Digital - Responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header Responsive -->
+        <header class="header">
+            <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Bree<span>MD</span></a>
+                
+                <div class="nav-links" id="navLinks">
+                <a href="#services">Services</a>
+                <a href="#formations">Formations</a>
+                <a href="#avis">Avis</a>
+                <a href="#contact" class="cta-button">Contact</a>
+                </div>
+                
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+            <div class="hero-content">
+                <h1>Transformez votre présence digitale</h1>
+                <p class="subtitle">Des solutions marketing sur mesure pour booster votre visibilité en ligne</p>
+                <div class="hero-buttons">
+                <a href="#services" class="primary-btn">Découvrir nos services</a>
+                <a href="#contact" class="secondary-btn">Demander un devis</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/logos.jpg" alt="Marketing digital" loading="lazy" width="300px">
+            </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+            <h2 class="section-title">Nos Solutions</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Stratégie Data-Driven</h3>
+                <p>Approche analytique pour des résultats mesurables</p>
+                </div>
+                <div class="feature-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Campagnes Ciblées</h3>
+                <p>Audience parfaitement segmentée</p>
+                </div>
+                <div class="feature-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Solutions Innovantes</h3>
+                <p>Technologies marketing de pointe</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                <h3>Bree Marketing Digital</h3>
+                <p>Votre partenaire en stratégie digitale</p>
+                </div>
+                <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="#services">Services</a>
+                <a href="#formations">Formations</a>
+                <a href="#blog">Blog</a>
+                </div>
+                <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> contact@breemarketing.com</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Bree Marketing Digital</p>
+                <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+                if (mobileMenuBtn && navLinks) {
+                    mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    
+                    // Changement d'icône
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                    });
+
+                    // Fermer le menu quand on clique sur un lien
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                        mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                    });
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
